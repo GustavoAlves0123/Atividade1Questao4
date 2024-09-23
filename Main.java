@@ -133,7 +133,7 @@ class Celular {
     }
 }
 
-public class TesteCelular {
+class TesteCelular {
     public static void main(String[] args) {
         Tela tela = new Tela(1, "Tela AMOLED", "Dynamic AMOLED", 6.4);
         Processador processador = new Processador(1, "Exynos 2200", "Octa-core", 2.8);
