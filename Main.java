@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 class Jogo {
     int codigo;
     String nome;
@@ -127,5 +130,29 @@ class Celular {
         for (Jogo jogo : jogosInstalados) {
             System.out.println(jogo.nome);
         }
+    }
+}
+
+public class TesteCelular {
+    public static void main(String[] args) {
+        Tela tela = new Tela(1, "Tela AMOLED", "Dynamic AMOLED", 6.4);
+        Processador processador = new Processador(1, "Exynos 2200", "Octa-core", 2.8);
+        Memoria memoria = new Memoria(1, "LPDDR5", 128);
+
+        Celular celular = new Celular(1, "Galaxy S23 FE", "Samsung", tela, processador, memoria);
+
+        Jogo jogo1 = new Jogo(1, "Genshin Impact", "FPS", 27.5);
+        Jogo jogo2 = new Jogo(2, "Wild Rift", "Estratégia", 1.0);
+
+        celular.ligar();
+        celular.instalarJogo(jogo1);
+        celular.instalarJogo(jogo2);
+
+        celular.listarJogos();
+
+        jogo1.iniciar();
+        jogo1.encerrar();
+
+        celular.desligar();
     }
 }
